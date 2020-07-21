@@ -11,6 +11,7 @@ namespace _04_ByteBank
         static void Main(string[] args)
         {
             ContaCorrente contaFernando = new ContaCorrente();
+
             contaFernando.titular = "Fernando";
             contaFernando.Sacar(45.20);
 
@@ -27,7 +28,12 @@ namespace _04_ByteBank
 
             Console.WriteLine("meu saldo: " + contaFernando.saldo);
             Console.WriteLine("saldo juba" + contaJuba.saldo );
+            contaJuba.Sacar(100);
 
+            Console.WriteLine("saldo belico " + contaJuba.saldo);
+            contaJuba.Transferir(200, contaFernando);
+
+            Console.WriteLine("saldo do fer: " + contaFernando.saldo);
 
 
             Console.ReadLine(); 
